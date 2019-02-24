@@ -3,26 +3,20 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: '.app-test',
   template: `
-    <h2>
-      Welcome !
-    </h2>
-
-    <input [(ngModel)]="name" type="text">
-    {{name}}
+    <div *ngFor="let color of colors">
+      <h2>{{color}}</h2>
+    </div>
   `,
   styles: [] 
 })
 export class TestComponent implements OnInit {
 
-  public name = "";
+  public colors = ["red", "green", "blue", "yellow"];
 
   constructor() { }
 
   ngOnInit() { 
   }
 
-  logMessage(value) {
-    console.log(value);
-  }
 
 }
