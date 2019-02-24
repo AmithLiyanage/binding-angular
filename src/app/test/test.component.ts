@@ -6,24 +6,11 @@ import { Component, OnInit } from '@angular/core';
     <h2>
       Welcome {{name }}
     </h2>
-    <h2 class="text-success">Codevoluation</h2>
-    <h2 [class]="successClass">Codevoluation</h2>
 
-    <h2 class="text-special" [class]="successClass">Codevoluation</h2>
-    <h2 [class.text-danger]="hasError">Codevoluation</h2>
-
-    <h2 [ngClass]="messageClasses">Codevoluation</h2>
+    <h2 [style.color]="'orange'">Style Binding</h2>
   `,
   styles: [` 
-    .text-success {
-      color: green;
-    }
-    .text-danger {
-      color: red;
-    }
-    .text-special {
-      font-style: italic;
-    }
+    
   `] 
 })
 export class TestComponent implements OnInit {
